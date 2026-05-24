@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>опа тцк</title>
+</head>
+<body>
+    <p>Введи пароль</p>
+
+    <textarea id="passwordInput"></textarea>
+
+    <button id="checkButton">Проверить</button>
+
+    <script>
+        const v = document.getElementById('passwordInput');
+        const b = document.getElementById('checkButton');
+        
+        const z = "0KHQsNCy0LXQu9C40Y/QvdC10YHRg9GJ0LXRgdGC0LLRg9C10YI=";
+        const p = "aHR0cHM6Ly93d3cueW91dHViZS5jb20";
+
+        b.addEventListener('click', function() {
+            const c = v.value.trim();
+            const x = decodeURIComponent(escape(atob(z)));
+            
+            if (c === x) {
+                window.location.href = atob(p);
+            } else {
+                alert("ОХ БРАТАН ВОТ ЭТО ТЫ НЕ ПРАВИЛЬНО СДЕЛАЛ");
+            }
+        });
+    </script>
+</body>
+</html>
